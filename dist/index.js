@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.cache = exports.NameSpaceConstants = void 0;
+exports.cache = exports.NameSpaceEnum = void 0;
 const axios_1 = __importDefault(require("axios"));
 const cacheUrl_1 = __importDefault(require("./utils/cacheUrl"));
 const CACHING_SERVICE_BASE_URL = process.env.BASE_URL + cacheUrl_1.default.SERVICE_ROOT_URL;
@@ -39,8 +39,8 @@ class Cache {
         });
     }
 }
-class NameSpaceConstants {
+class NameSpaceEnum {
 }
-exports.NameSpaceConstants = NameSpaceConstants;
-NameSpaceConstants.CUSTOMER_DETAILS = "CUSTOMER_DETAILS";
+exports.NameSpaceEnum = NameSpaceEnum;
+NameSpaceEnum.CUSTOMER_DETAILS = "CUSTOMER_DETAILS";
 exports.cache = new Cache();
