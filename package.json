@@ -1,9 +1,9 @@
 {
   "name": "@danishshaikh9702/cache-lib",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.ts.map",
   "scripts": {
     "build": "tsc"
   },

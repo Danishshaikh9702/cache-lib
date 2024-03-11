@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var cacheUrl = {
+const cacheUrl = {
     SERVICE_ROOT_URL: '/caching-service/api/v1',
     CREATE_NAME_SPACE: '/create-namespace',
     CREATE_CACHE: '/create-cache',
