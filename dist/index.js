@@ -17,21 +17,21 @@ const axios_1 = __importDefault(require("axios"));
 const cacheUrl_1 = __importDefault(require("./utils/cacheUrl"));
 const CACHING_SERVICE_BASE_URL = process.env.BASE_URL + cacheUrl_1.default.SERVICE_ROOT_URL;
 class Cache {
-    createCache(namespace, key, value) {
+    set(namespace, key, value) {
         return __awaiter(this, void 0, void 0, function* () {
             const url = CACHING_SERVICE_BASE_URL + cacheUrl_1.default.CREATE_CACHE;
             const data = (yield axios_1.default.post(url, { namespace, key, value })).data;
             return data;
         });
     }
-    getCache(namespace, key) {
+    get(namespace, key) {
         return __awaiter(this, void 0, void 0, function* () {
             const url = CACHING_SERVICE_BASE_URL + cacheUrl_1.default.GET_CACHE.replace(':namespace', namespace).replace(':key', key);
             const data = (yield axios_1.default.get(url)).data;
             return data;
         });
     }
-    deleteCache(namespace, key) {
+    delete(namespace, key) {
         return __awaiter(this, void 0, void 0, function* () {
             const url = CACHING_SERVICE_BASE_URL + cacheUrl_1.default.DELETE_CACHE;
             const data = (yield axios_1.default.delete(url, { data: { namespace, key } })).data;
@@ -39,8 +39,9 @@ class Cache {
         });
     }
 }
-class NameSpaceEnum {
-}
-exports.NameSpaceEnum = NameSpaceEnum;
-NameSpaceEnum.CUSTOMER_DETAILS = "CUSTOMER_DETAILS";
+var NameSpaceEnum;
+(function (NameSpaceEnum) {
+    NameSpaceEnum["CUSTOMER_DETAILS"] = "CUSTOMER_DETAILS";
+    NameSpaceEnum["DASHBOARD_DETAILS"] = "DASHBOARD_DETAILS";
+})(NameSpaceEnum || (exports.NameSpaceEnum = NameSpaceEnum = {}));
 exports.cache = new Cache();
