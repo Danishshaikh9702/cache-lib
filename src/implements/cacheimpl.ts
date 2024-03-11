@@ -1,9 +1,9 @@
-import { NameSpaceEnum } from "..";
+import { NameSpaceConstants } from "..";
 import { StandardResponse, valueType } from "../types";
 // not required
 interface CacheImpl{
-     set(namespace:NameSpaceEnum, key:string, value:valueType):Promise<StandardResponse>
-     get(namespace:NameSpaceEnum, key:string):Promise<StandardResponse>
-     delete(namespace:NameSpaceEnum, key:string):Promise<StandardResponse>
+     set(namespace:NameSpaceConstants, key:string, value:valueType):Promise<StandardResponse>
+     get(namespace:NameSpaceConstants, key:string):Promise<StandardResponse>
+     delete(namespace:NameSpaceConstants, key:string):Promise<StandardResponse>
 }
 export default CacheImpl
