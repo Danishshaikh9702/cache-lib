@@ -1,12 +1,14 @@
 import CacheImpl from "./implements/cacheimpl";
 import { StandardResponse, valueType } from "./types";
 declare class Cache implements CacheImpl {
-    set(namespace: NameSpaceConstants, key: string, value: valueType): Promise<StandardResponse>;
-    get(namespace: NameSpaceConstants, key: string): Promise<StandardResponse>;
-    delete(namespace: NameSpaceConstants, key: string): Promise<StandardResponse>;
+    set(namespace: NameSpaceEnums, key: string, value: valueType): Promise<StandardResponse>;
+    get(namespace: NameSpaceEnums, key: string): Promise<StandardResponse>;
+    delete(namespace: NameSpaceEnums, key: string): Promise<StandardResponse>;
 }
-export declare class NameSpaceConstants {
-    static readonly CUSTOMER_DETAILS: string;
+export declare enum NameSpaceEnums {
+    SECURE_KEY = "SECURE_KEY",
+    CUSTOMER_UID = "CUSTOMER_UID",
+    APP_KEY = "APP_KEY"
 }
 export declare const cache: Cache;
 export {};

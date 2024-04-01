@@ -1,14 +1,11 @@
 {
   "name": "@danishshaikh9702/cache-lib",
-  "version": "1.0.16",
+  "version": "1.0.23",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github/@danishshaikh9702"
   },
   "author": "danish.shaikh@respo.co.in",
   "keywords": [],

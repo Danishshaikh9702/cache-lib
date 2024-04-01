@@ -1,7 +1,7 @@
 const cacheUrl={
     SERVICE_ROOT_URL:'/caching-service/api/v1',
     CREATE_NAME_SPACE:'/create-namespace',
-    CREATE_CACHE:'/create-cache',
+    CREATE_CACHE:'/set-cache',
     GET_CACHE:'/:namespace/:key',
     DELETE_CACHE:'/delete-cache'
 }
